@@ -1,0 +1,32 @@
+# Web Worker Sandbox
+
+A testing ground for [Web Workers](http://www.html5rocks.com/en/tutorials/workers/basics/), created for the book *[Async JavaScript](http://leanpub.com/asyncjs/)*.
+
+Plug in your master script and your worker script, then click **Run**. When you've got something you want to show off, just share the link.
+
+## How does it work?
+
+When you click **Run**, the two scripts are `POST`ed to the server and saved, and you're redirected to a URL containing the ID of the database entry.
+
+When that URL is requested, the server sets a cookie containing that ID, so that when
+
+    new Worker('worker.js')
+
+runs from the master script, that cookie is sent with the request—allowing the server to serve the right `worker.js` for the page.
+
+## Forking
+
+To run your own Web Worker Sandbox, all you have to do is clone the repo, install Node 0.6.x, run `npm install` to fetch the dependencies, and create a `mongodb.json` file in this format:
+
+    {
+      "username": "username",
+      "password": "password",
+      "address":  "foo.bar.com:port",
+      "db":       "dbname"
+    }
+
+Pull requests welcome!
+
+## License
+
+Available under the MIT License: http://trevorburnham.mit-license.org/

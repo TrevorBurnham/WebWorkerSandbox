@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Web Worker Sandbox</title>
+  <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Poiret+One">
+  <link rel="stylesheet" media="all" href="/style.css">
+  <script src="//code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="ace.complete.js"></script>
+</head>
+<body>
+  <header>
+    <a href="http://webworkersandbox.com">
+      <h1>Web Worker Sandbox</h1>
+    </a>
+    <button id="run">Run</button>
+  </header>
+  <div class="scriptPane">
+    <h2>Master</h2>
+    <div id="masterEditor" class="editor"><%= state.master %></div>
+  </div>
+  <div class="scriptPane">
+    <h2>Worker</h2>
+    <div id="workerEditor" class="editor"><%= state.worker %></div>
+  </div>
+  <div id="sandboxWrapper">
+    <h2>Output</h2>
+    <div id="sandbox">
+      <p>
+        This demonstration was created by Trevor Burnham for the book <a href="http://leanpub.com/asyncjs"><cite>Async JavaScript</cite></a>. You can view the source <a href="https://github.com/TrevorBurnham/WebWorkerSandbox">on GitHub</a>.
+      </p>
+      <p>
+        Use <code>$('#sandbox')</code> to interact with this HTML.
+      </p>
+    </div>
+  </div>
+  <script src="application.js"></script>
+</body>
+</html>
