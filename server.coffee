@@ -69,6 +69,7 @@ app.post '/run', (req, res, next) ->
 
 port = if process.env.NODE_ENV is 'production' then 80 else 5555
 app.listen port
+console.log "WebWorkerSandbox is running on port #{port}"
 
 # Utility functions
 makeHash = (raw) -> crypto.createHash('sha256').update(raw).digest('base64')

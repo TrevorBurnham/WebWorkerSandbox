@@ -5,17 +5,19 @@
     "webworkersandbox.com"
   ],
   "scripts": {
-    "start": "server.coffee"
+    "start": "coffee server.coffee"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
-    "node": "v0.6.x"
+    "node": ">=0.10.0"
   },
+  "repository": "git@github.com:TrevorBurnham/WebWorkerSandbox.git",
   "dependencies": {
+    "coffee-script": "^1.1.0",
     "ejs": "0.6.1",
-    "express": "2.5.8",
-    "mongoose": "2.5.9",
-    "nib": "0.3.2",
-    "stylus": "0.24.0"
+    "express": "^2.5.8",
+    "mongoose": "^2.5.9",
+    "nib": "^0.3.2",
+    "stylus": "^0.24.0"
   }
 }
